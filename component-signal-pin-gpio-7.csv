@@ -1,0 +1,8 @@
+﻿Component,Signal Pin (GPIO),VCC Connection,GND Connection,Notes
+DHT11 Sensor,GPIO 4,3.3V (or 5V if module supports),GND,Digital data pin to GPIO 4. Needs pull‑up resistor if not built‑in.
+Water Sensor,GPIO 34 (ADC1_CH6),3.3V,GND,Analog output to GPIO 34. ESP32 ADC range 0–4095.
+Gas Sensor (MQ),GPIO 35 (ADC1_CH7),5V (MQ sensors require 5V heater),GND,Analog output to GPIO 35. Use voltage divider if output >3.3V.
+Light Sensor (LDR),GPIO 39 (ADC1_CH3),3.3V,GND,Use voltage divider with resistor to scale LDR output to 0–3.3V.
+Buzzer,GPIO 26,"VCC (depends on buzzer type, usually 3.3V or 5V)",GND,"GPIO 26 drives buzzer input. HIGH = ON, LOW = OFF."
+LCD (I²C),"SDA = GPIO 18, SCL = GPIO 19",5V (or 3.3V depending on module),GND,"I²C bus. Address 0x27. Connect SDA to GPIO 18, SCL to GPIO 19."
+ESP32 Power,—,5V via USB or VIN,GND,Powers the ESP32 itself.
